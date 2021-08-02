@@ -9,6 +9,8 @@
 # Bonus: Can you do this in one pass?
 
 
+# does this update?
+
 x = [10, 15, 3, 7]
 y = []
 z = 0
