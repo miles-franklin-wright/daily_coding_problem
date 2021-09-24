@@ -9,7 +9,7 @@
 # Follow-up: Can you do this in O(N) time and constant space?
 
 
-test = [2, 4, 6, 2, 5]
+test = [2, 4, -6, 2, 5]
 odds = test[1::2]
 evens = test[::2]
 
@@ -20,17 +20,15 @@ sums = []
 def add(list, sums):
     posisum = 0
     antisum = 0
-    sum_counter = 0
     for i in list:
         if i < 0:
             antisum += i
         else:
             posisum += i
-            sum_counter += 1
-    if sum_counter > 1:
+    if antisum == 0:
         sums.append(posisum)
     else:
-        sums.append(antisum)
+        sums.append(posisum + antisum)
     
 add(odds, sums)
 add(evens, sums)
